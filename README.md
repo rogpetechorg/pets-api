@@ -1,24 +1,29 @@
-# README
+# Pet API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+API projetda para o segmento de mercado voltado a Pets e tem projetos voltado a organização das ONGS, ajuda
+em projeção de adoção e outros itens a serem defindios.
 
-Things you may want to cover:
+## Requisitos
 
-* Ruby version
+Version: ruby 3.0.0p0
 
-* System dependencies
+## Inicialização do Projeto
 
-* Configuration
 
-* Database creation
+1. Clone o projeto via github
 
-* Database initialization
+```
+ $ git clone git@github.com:rogpetechorg/pets-api.git
+```
 
-* How to run the test suite
+2. Acesse a pasta do projeto
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+  cd pets-api
+```
 
-* Deployment instructions
+3. Execute a instalação das dependencias do projeto
 
-* ...
+```
+  bundle install
+```
