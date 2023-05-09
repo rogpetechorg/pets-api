@@ -6,7 +6,7 @@ class AuthenticationsController < ApplicationController
     user = User.find_by_email(params[:email])
     return render json: { error: 'unauthorized' }, status: :unauthorized unless user&.authenticate(params[:password])
 
-    token = Authorization::JsonWebToken.encode(user.to_json)
+    token = Authorization::JsonWebToken.encode({ user_id: user.id })
     time = Time.now + 24.hours.to_i
     render json: { token: token, expired_at: time.strftime("%m-%d-%Y %H:%M"), username: user.username }, status: :ok
   end
